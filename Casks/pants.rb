@@ -1,4 +1,6 @@
 cask "pants" do
+  version "0.13.2"
+
   arch arm: "aarch64", intel: "x86_64"
   os macos: "macos-aarch64", linux: "linux-#{arch}"
 
@@ -9,13 +11,9 @@ cask "pants" do
          x86_64_linux: "74a1e53bc50d6ef6ce1bc67bd9f7b48e549505e0a2453ad4d5ccbc72b0bea874"
 
   on_macos do
-    version "0.13.2"
-
     depends_on arch: :arm64
   end
   on_linux do
-    version "0.13.2"
-
     depends_on arch: [:arm64, :x86_64]
   end
 
